@@ -66,12 +66,11 @@ jobs:
       - name: deploy
         id: deployment
         uses: actions/deploy-pages@v1
-        jobs:
-          my-job:
+          jobs:
+            my-job:
             # Importing a reusable workflow from another repository and branch
-          uses: organization/repo/.github/workflows/build-test-deploy.yml@main
+            uses: organization/repo/.github/workflows/build-test-deploy.yml@main
             # Passing 'node-version' as an input parameter to the reusable workflow
             with:
-             node-version: '18.x'
-
-      
+              node-version: '18.x'
+              
